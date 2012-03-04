@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= @metadata['page_title'] %></title>
+    <%= stylesheet_link_tag "www/www" %>
+  </head>
+  <body>
+    <div id="layout_header">
+      <%= yield :layout_header %>
+    </div>
+    <div id="layout_content">
+      <%= yield :page_template %>
+    </div>
+  </body>
+</html>
