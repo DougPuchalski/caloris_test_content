@@ -1,0 +1,18 @@
+<div>
+  <div id="caloris-metadata">
+    <div data-name="page_id" data-content="sitemap"></div>
+    <div data-name="page_title" data-content="Caloris Test Content Site Map"></div>
+    <div data-name="published" data-scheme="boolean" data-content="true"></div>
+  </div>
+  <div class="caloris-content">
+    <ul>
+      <% @page.site.find_all_pages.sort.each do |path, page| %>
+        <% next unless page.published? %>
+        <li>
+          <dt><%= link_to path, path %></dt>
+          <dd><%= page.name %></dd>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
